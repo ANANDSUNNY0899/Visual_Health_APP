@@ -1,0 +1,117 @@
+/* src/App.css */
+/* FINAL, CORRECTED VERSION */
+
+/* --- Main Layout Containers for the Visualizer Page --- */
+.app-container {
+  display: grid;
+  grid-template-rows: 70px 1fr; 
+  width: 100vw;
+  height: 100vh;
+  /* THE FIX: Prevents scrolling ONLY on the visualizer page */
+  overflow: hidden; 
+}
+
+.main-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* --- 3D Canvas Container --- */
+.canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Puts it at the back */
+}
+
+/* --- UI Panel (Health Controls) --- */
+.ui-panel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100; /* Puts it on top of the canvas */
+  background-color: var(--panel-background);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  width: 320px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+    
+.ui-panel h1 {
+    margin-top: 0;
+    font-size: 1.4em;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.slider-group {
+  margin-top: 20px;
+}
+    
+.slider-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+    
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #444;
+  border-radius: 5px;
+  outline: none;
+}
+    
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--accent-color);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: var(--accent-color-hover);
+}
+    
+.time-slider {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* --- Floating Action Button (Chat) --- */
+.chat-fab {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 150;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 25px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+.chat-fab:hover {
+  background-color: var(--accent-color-hover);
+  transform: translateY(-2px);
+}

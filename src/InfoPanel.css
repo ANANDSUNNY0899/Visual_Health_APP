@@ -1,0 +1,94 @@
+/* src/InfoPanel.css */
+.info-panel {
+  position: absolute;
+  top: 20px; /* Position below the new header */
+  right: 20px;
+  width: 350px;
+  background-color: var(--panel-background);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-primary);
+  z-index: 100;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.info-header h2 {
+  margin: 0;
+  font-size: 1.6em;
+  color: white;
+}
+
+.close-btn {
+  background: #444;
+  color: var(--text-secondary);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.close-btn:hover {
+  background: var(--danger-color);
+  color: white;
+}
+
+.info-content h3 {
+  color: var(--accent-color);
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-content p {
+  line-height: 1.6;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.risk-level {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.1em;
+  border: 1px solid var(--border-color);
+}
+
+.prediction-section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.prediction-score {
+  background-color: var(--danger-color);
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}

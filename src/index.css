@@ -1,0 +1,39 @@
+/* src/index.css */
+/* FINAL, CORRECTED VERSION */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --background-color: #121212;
+  --panel-background: #1e1e1e;
+  --border-color: #333333;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent-color: #6a5acd;
+  --accent-color-hover: #5a4baf;
+  --danger-color: #e57373;
+  --warning-color: #ffb74d;
+  --safe-color: #81c784;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Base styles for the entire document */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure the React root takes up full height */
+#root {
+  width: 100%;
+  height: 100%;
+}
